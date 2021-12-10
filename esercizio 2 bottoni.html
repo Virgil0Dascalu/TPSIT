@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Bottone Ciao</h1>
+    <style>
+
+    div {
+
+        border: 1px solid black;
+        display:inline-block;
+        height: 40px;
+        width: 40px;
+        margin: 1px;
+        text-align: center;
+       
+    }
+ p {
+     text-align: center;
+     font-size: x-small;
+ }
+.color1{
+
+    background-color: rgb(216, 25, 25);
+}
+.color2{
+
+background-color: rgb(70, 216, 25);
+}
+.color3{
+
+background-color: rgb(101, 11, 245);
+}
+.color4{
+
+background-color: rgb(245, 136, 11);
+}
+.color5{
+
+background-color: rgb(229, 245, 11);
+}
+.color6{
+
+background-color: rgb(11, 245, 226);
+}
+.color7{
+
+background-color: rgb(245, 11, 175);
+}
+.color8{
+
+background-color: rgb(245, 11, 128);
+}
+.color9{
+
+background-color: rgb(98, 127, 255);
+}
+.color10{
+
+background-color: rgb(255, 204, 204);
+}
+.color11{
+
+background-color: rgb(158, 255, 226);
+}
+.color12{
+
+background-color: rgb(182, 184, 111);
+}
+.color13{
+
+background-color: rgb(255, 208, 137);
+}
+.color14{
+
+background-color: rgb(32, 99, 143);
+}
+.color15{
+
+background-color: rgb(180, 255, 236);
+}
+.color16{
+
+background-color: rgb(116, 14, 14);
+}
+.color17{
+
+background-color: rgb(147, 116, 197);
+}
+.color18{
+
+background-color: rgb(102, 81, 64);
+}
+.color19{
+
+background-color: rgb(156, 103, 177);
+}
+.color20{
+
+background-color: rgb(255, 206, 70);
+}
+
+
+
+
+button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.buttonBlue {background-color: #008CBA;} 
+
+.buttonOrange {background-color: #ff9100;}
+
+
+    </style>
+
+</head>
+<body>
+    <div id ="box1" class="color1"><p>1</p></div>
+    <div id ="box2" class="color2"><p>2</p></div>
+    <div id ="box3" class="color3"><p>3</p></div>
+
+
+    <button class="buttonBlue" type="button" onclick="return CambiaTXT()">Cliccami!</button>
+    
+
+<script>
+  function CambiaTXT(){
+   document.getElementById("box1").innerHTML="ciao";
+   document.getElementById("box2").innerHTML="ciao";
+   document.getElementById("box3").innerHTML="ciao";
+ }
+
+</script>
+
+<h1>Bottone dei 5</h1>
+
+<div id ="box4" class="color4"><p>1</p></div>
+<div id ="box5" class="color5"><p>2</p></div>
+<div id ="box6" class="color6"><p>3</p></div>
+<div id ="box7" class="color7"><p>4</p></div>
+<div id ="box8" class="color8"><p>5</p></div>
+<div id ="box9" class="color9"><p>6</p></div>
+<div id ="box10" class="color10"><p>7</p></div>
+<div id ="box11" class="color11"><p>8</p></div>
+<div id ="box12" class="color12"><p>9</p></div>
+<div id ="box13" class="color13"><p>10</p></div>
+<div id ="box14" class="color14"><p>11</p></div>
+<div id ="box15" class="color15"><p>12</p></div>
+<div id ="box16" class="color16"><p>13</p></div>
+<div id ="box17" class="color17"><p>14</p></div>
+<div id ="box18" class="color18"><p>15</p></div>
+<div id ="box19" class="color19"><p>16</p></div>
+<div id ="box20" class="color20"><p>17</p></div>
+
+<button class="buttonOrange" type="button" onclick="return Numero()">Cliccami!</button>
+
+<script>
+ function Numero(){
+   document.getElementById("box4").innerHTML="5";
+   document.getElementById("box5").innerHTML="10";
+   document.getElementById("box6").innerHTML="15"; 
+   document.getElementById("box7").innerHTML="20";
+   document.getElementById("box8").innerHTML="25";
+   document.getElementById("box9").innerHTML="30";
+   document.getElementById("box10").innerHTML="35";
+   document.getElementById("box11").innerHTML="40"; 
+   document.getElementById("box12").innerHTML="45";
+   document.getElementById("box13").innerHTML="50";
+   document.getElementById("box14").innerHTML="55"; 
+   document.getElementById("box15").innerHTML="60";
+   document.getElementById("box16").innerHTML="65";
+   document.getElementById("box17").innerHTML="70";
+   document.getElementById("box18").innerHTML="75";
+   document.getElementById("box19").innerHTML="80";
+   document.getElementById("box20").innerHTML="85";
+ }
+ 
+</script>
+
+
+
+
+</body>
+</html>
