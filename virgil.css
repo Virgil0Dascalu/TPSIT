@@ -1,0 +1,15 @@
+p{
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+ 
+.rosso{
+    color: red;
+}
+ 
+.miobottone{
+    background-color: rgb(184, 184, 255); 
+    padding: 50px 100px; 
+    font-size: xx-large;
+   }
+ 
