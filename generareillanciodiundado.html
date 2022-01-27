@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/virgil.css">
+    <title>Document</title>
+ 
+    <style>
+     
+     
+    </style>
+</head>
+<body>
+    <p>Primo Dado</p>
+    <p class="rosso" id="out2"></p>
+    <p>Secondo Dado</p>
+    <p class="rosso" id="out3"></p>
+    <button class="miobottone" onclick="lanciodado()">lancia il dado</button>
+
+ 
+    <script>
+        function lanciodado(){
+        let dado0=0;
+        let dado1=0;
+        let dado2=0;
+        let dado3=0;
+        casuale=Math.random();
+        casuale2=Math.random();
+
+        var x = document.createElement("img");
+        x.setAttribute("src", "img_Haivinto.jpg");
+        x.setAttribute("width", "400");
+        x.setAttribute("height", "400");
+        x.setAttribute("alt", "hai vinto"); 
+ 
+        dado1=casuale*5;
+        dado0=casuale2*5;
+        dado2=Math.round(dado1)+1;
+        dado3=Math.round(dado0)+1;
+       
+ 
+        //genera un numero compreso fra 0 e 1. 0 è incluso 1 è escluso
+   
+        document.getElementById("out2").innerHTML=dado2;
+        document.getElementById("out3").innerHTML=dado3;
+        
+        if(dado2==dado3)
+        {
+             document.body.appendChild(x); 
+        }
+    }
+    
+    </script>
+    
+</body>
+</html>
