@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown da 3 a 0</title>
+
+
+    <style>
+
+        #miocountdown{
+            font-size: 100px;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <p id="miocountdown"></p>
+
+    <script>
+        const mioIntervallo=setInterval(startCountDown, 1000)
+        let countdown=3;
+
+        function startCountDown(){
+           document.getElementById("miocountdown").innerHTML=countdown.toString();
+
+            countdown--;
+            if(countdown==-1)
+            {
+                clearInterval(mioIntervallo)
+                document.getElementById("miocountdown").innerHTM="Start!";
+            }
+        }
+    </script>
+
+
+</body>
+</html>
