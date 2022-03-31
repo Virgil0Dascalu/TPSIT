@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        button{
+      box-shadow: inset 0 0 0 0 #ff0000;
+      transition: ease-out 0.5s;
+      background-color: rgb(255, 255, 255);
+      border-color: #ff0000;
+      border-width: 5px;
+      color: rgb(70, 70, 70);
+      border-radius: 10px;
+      margin: 10px auto;
+      cursor: pointer;
+      width: 230px;
+      height: 80px;
+      font-size: 25px;
+     }
+    
+    button:hover{
+    box-shadow: inset 0 0 300px 0  #ff0000;
+        color: rgb(255, 255, 255);
+    }
+    </style>
+</head>
+<body>
+    <button onclick="caricaarray()">Carica Array</button>
+    <button onclick="caricaMassimo()">Trova il massimo</button>
+    <button onclick="caricaMinimo()">Trova il minimo</button>
+    <p id="out"></p>
+    <p id="out2">Massimo: </p>
+    <p id="out3">Minimo: </p>
+
+    <script>
+        let arraydatiCasuali=[];
+        let max=0;
+        let min=1000;
+        indice=0;
+        //dichiaro un array e lo inizializzo con numeri casuali da 0 a 999
+
+        function caricaarray(){
+            let numerocasuale=-1;
+            for(let i=0;i<1000;i++)
+            {
+                numerocasuale=parseInt(Math.random()*1000);
+                arraydatiCasuali.push(numerocasuale);
+                document.getElementById("out").innerHTML+=arraydatiCasuali[i]+" ";
+            }
+        }
+
+        function caricaMassimo(){
+            for(let i=0;i<1000;i++)
+            {
+                if(arraydatiCasuali[i]>max)
+                {
+                    max=arraydatiCasuali[i];
+                    indice=i;
+                }
+            }
+            document.getElementById("out2").innerHTML+=max+" si trova in posizione "+indice;
+
+
+        }
+
+        function caricaMinimo(){
+            for(let i=0;i<1000;i++)
+            {
+                if(arraydatiCasuali[i]<min)
+                {
+                    min=arraydatiCasuali[i];
+                    indice=i;
+                }
+            }
+            document.getElementById("out3").innerHTML+=min+" si trova in posizione "+indice;
+
+
+        }
+
+    </script>
+
+</body>
+</html>
