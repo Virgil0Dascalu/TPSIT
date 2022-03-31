@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/quadratiRossi.css">
+    <title>Quadrati rossi</title>
+
+
+
+
+</head>
+
+<body onload="CambioColore()">
+        <div id="quadrato1"></div>
+        <div id="quadrato2"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+
+var quadrato1=document.getElementById("quadrato1")
+var quadrato2=document.getElementById("quadrato2")
+
+
+
+
+function CambioColore(){
+
+    setInterval(function(){
+        
+        var posizione1=Math.floor((Math.random()*500)+1);
+        var posizione1=Math.floor((Math.random()*800)+1);
+        var posizione2=Math.floor((Math.random()*500)+1);
+        var posizione2=Math.floor((Math.random()*800)+1);    
+
+        quadrato1.style.top=posizione1+"px";
+        quadrato1.style.left=posizione1+"px";
+        quadrato2.style.top=posizione2+"px";
+        quadrato2.style.left=posizione2+"px";       
+
+    },1000)
+}
+
+
+
+function sovrapposizione($quadrato1, $quadrato2) {
+    var x1=$quadrato1.offset().left;
+    var y1=$quadrato1.offset().top;
+    var z1=$quadrato1.outerHeight(true);
+    var o1=$quadrato1.outerWidth(true);
+    var b1=y1+z1;
+    var a1=x1+o1;
+    var x2=$quadrato2.offset().left;
+    var y2=$quadrato2.offset().top;
+    var z2=$quadrato2.outerHeight(true);
+    var o2=$quadrato2.outerWidth(true);
+    var b2=y2+z2;
+    var a2=x2+o2;
+      
+    if (b1<y2||y1>b2||a1<x2||x1>a2){
+        quadrato1.style.backgroundColor="yellow"
+        quadrato2.style.backgroundColor="blue"
+    } else {
+        quadrato1.style.backgroundColor="red"
+        quadrato2.style.backgroundColor="red"
+    }
+  }
+
+window.setInterval(function() {
+  $('#result').text(sovrapposizione($('#quadrato1'), $('#quadrato2')));
+}, 10);
+</script>
+           
+            
+</body>
+</html>
