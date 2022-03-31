@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quadrati che cambiano colore</title>
+
+   <style>
+         
+      #A
+      {
+         left:400px;
+         top:100px;
+         background-color:white;
+         position:absolute;
+         height:100px;
+         width:100px;
+         border-width:1px;
+         border:solid black;
+      }
+   </style>
+</head>
+<body onload="start()">
+   <script>
+
+      function start()
+      {
+         var a=document.getElementById('A');
+      
+         
+  
+         
+        
+         setInterval(function () {
+            r=parseInt(Math.random()*255);
+            g=parseInt(Math.random()*255);
+            b=parseInt(Math.random()*255);
+            sfondo='rgb('+r+','+g+','+b+')';
+            a.style.backgroundColor=sfondo;
+         }, 500);
+      }
+      
+      </script>
+      <div id="A" style="background-color: rgb(111, 168, 181);"></div>
+</body>
+</html>
