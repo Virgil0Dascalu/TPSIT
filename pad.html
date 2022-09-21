@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAD</title>
+
+    <style>
+        .div1{
+            border: 2px solid black;
+            height: 500px;
+            width: 500px;
+            margin: 10px;
+        }
+        .blocco1{
+            border: 2px solid black;
+            height: 40px;
+            width: 40px;
+            margin: 60px;
+            float: left;
+        }
+        .blocco2{
+            border: 2px solid black;
+            height: 40px;
+            width: 40px;
+            margin: 60px;
+            margin-top: -10px;
+            float: left;
+        }
+        .blocco3{
+            border: 2px solid black;
+            height: 40px;
+            width: 40px;
+            margin: 60px;
+            margin-top: -10px;
+            float: left;
+        }
+        .contatore1{
+            border: 2px solid black;
+            height: 80px;
+            width: 180px;
+            margin-left: 57px;
+            margin-top: 40px;
+            float: left;
+            text-align: center;
+        }
+        .contatore2{
+            border: 2px solid black;
+            height: 80px;
+            width: 180px;
+            margin: 10px;
+            margin-top: 40px;
+            float: left;
+            text-align: center;
+        }
+        .bottone{
+            height: 40px;
+            width: 40px;
+            background-color: transparent;
+            font-size: xx-large;
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="blocco1"></div>
+        <div class="blocco1">
+            <button class="bottone" onclick="addizioneV()">⇑</button>
+        </div>
+        <div class="blocco1"></div>
+        <div class="blocco2">
+            <button class="bottone" onclick="sottrazioneO()">⇐</button>
+        </div>
+        <div class="blocco2"></div>
+        <div class="blocco2">
+            <button class="bottone" onclick="addizioneO()">⇒</button>
+        </div>
+        <div class="blocco3"></div>
+        <div class="blocco3">
+            <button class="bottone" onclick="sottrazioneV()">⇓</button>
+        </div>
+        <div class="blocco3"></div>
+        <div class="contatore1">
+            V = <p id="verticale">0</p>
+        </div>
+        <div class="contatore2">
+            O = <p id="orizzontale">0</p>
+        </div>
+    </div>
+
+    <script>
+        let contatore1=0;
+        let contatore2=0;
+        function addizioneV(){
+            contatore1++;
+            document.getElementById("verticale").innerHTML=contatore1;
+        }
+        function sottrazioneV(){
+            contatore1--;
+            document.getElementById("verticale").innerHTML=contatore1;
+        }
+        function addizioneO(){
+            contatore2++;
+            document.getElementById("orizzontale").innerHTML=contatore2;
+        }
+        function sottrazioneO(){
+            contatore2--;
+            document.getElementById("orizzontale").innerHTML=contatore2;
+        }
+    </script>
+</body>
+</html>
