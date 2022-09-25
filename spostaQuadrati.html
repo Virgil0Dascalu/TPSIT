@@ -1,0 +1,43 @@
+<html>
+    <style>
+        div{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-width: 1px;
+            border: solid black;
+            top: 20px;
+            background-color: green;
+        }
+    </style>
+
+
+</head>
+
+
+    
+
+<body onload="sposta()">
+    <div name='A'></div>
+    <div name='A'></div>
+    <div name='A'></div>
+    <div name='A'></div>
+    <div name='A'></div> 
+    
+    <script>
+        function sposta(){
+            var qdrt=document.getElementsByName('A');
+            for(i=0;i<qdrt.length;i++)
+            {
+                qdrt[i].style.left=(i*60)+10;
+            }
+    
+            i=4;
+            setInterval(function(){
+                qdrt[i].style.marginLeft=150;
+                i--;
+            }, 400);
+        }
+    </script>
+</body>
+</html>
